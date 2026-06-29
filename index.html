@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <form id="registrationForm" novalidate>
+
+            <h1>User Registration</h1>
+            <p>Fill out the form below.</p>
+
+            <!-- Full Name -->
+            <div class="form-group">
+                <label for="name">Full Name <span class="required">*</span></label>
+                <input type="text" id="name" placeholder="John Doe" required minlength="3">
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+                <label for="email">Email Address <span class="required">*</span></label>
+                <input type="email" id="email" placeholder="example@email.com" required>
+            </div>
+
+            <!-- Password -->
+            <div class="form-group">
+                <label for="password">Password <span class="required">*</span></label>
+                <input type="password" id="password" minlength="8" required>
+            </div>
+
+            <!-- Confirm Password -->
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password <span class="required">*</span></label>
+                <input type="password" id="confirmPassword" minlength="8" required>
+            </div>
+
+            <!-- Phone -->
+            <div class="form-group">
+                <label for="phone">Phone Number <span class="required">*</span></label>
+                <input type="tel" id="phone" pattern="[0-9]{10}" placeholder="9876543210" required>
+            </div>
+
+            <!-- Age -->
+            <div class="form-group">
+                <label for="age">Age <span class="required">*</span></label>
+                <input type="number" id="age" min="18" max="100" required>
+            </div>
+
+            <!-- Date of Birth -->
+            <div class="form-group">
+                <label for="dob">Date of Birth <span class="required">*</span></label>
+                <input type="date" id="dob" required>
+            </div>
+
+            <!-- Gender -->
+            <div class="form-group">
+                <label>Gender <span class="required">*</span></label>
+
+                <div class="radio-group">
+                    <label>
+                        <input type="radio" name="gender" required>
+                        Male
+                    </label>
+
+                    <label>
+                        <input type="radio" name="gender">
+                        Female
+                    </label>
+
+                    <label>
+                        <input type="radio" name="gender">
+                        Other
+                    </label>
+                </div>
+            </div>
+
+            <!-- Country -->
+            <div class="form-group">
+                <label for="country">Country <span class="required">*</span></label>
+
+                <select id="country" required>
+                    <option value="">Select Country</option>
+                    <option>India</option>
+                    <option>USA</option>
+                    <option>Canada</option>
+                    <option>Australia</option>
+                    <option>Germany</option>
+                </select>
+            </div>
+
+            <!-- Skills -->
+            <div class="form-group">
+                <label>Skills</label>
+
+                <div class="checkbox-group">
+                    <label><input type="checkbox"> HTML</label>
+                    <label><input type="checkbox"> CSS</label>
+                    <label><input type="checkbox"> JavaScript</label>
+                    <label><input type="checkbox"> React</label>
+                    <label><input type="checkbox"> Python</label>
+                </div>
+            </div>
+
+            <!-- Experience -->
+            <div class="form-group">
+                <label for="experience">
+                    Experience (Years)
+                </label>
+
+                <input type="range" id="experience" min="0" max="10" value="0">
+
+                <span id="rangeValue">0 Years</span>
+            </div>
+
+            <!-- Portfolio -->
+            <div class="form-group">
+                <label for="portfolio">Portfolio URL</label>
+
+                <input type="url" id="portfolio" placeholder="https://example.com">
+            </div>
+
+            <!-- LinkedIn Profile -->
+            <div class="form-group">
+                <label for="linkedin">LinkedIn Profile</label>
+
+                <input type="url" id="linkedin" placeholder="https://www.linkedin.com/your-profile">
+            </div>
+
+            <!-- Resume -->
+            <div class="form-group">
+                <label for="resume">Upload Resume</label>
+
+                <input type="file" id="resume" accept=".pdf,.doc,.docx">
+            </div>
+
+            <!-- About -->
+            <div class="form-group">
+                <label for="about">About Yourself</label>
+
+                <textarea id="about" rows="5" placeholder="Tell us something about yourself..."></textarea>
+            </div>
+
+            <!-- Terms -->
+            <div class="form-group terms">
+                <label>
+                    <input type="checkbox" id="terms" required>
+
+                    I agree to the Terms & Conditions
+                    <span class="required">*</span>
+                </label>
+            </div>
+
+            <!-- Buttons -->
+            <div class="buttons">
+                <button type="submit">Register</button>
+                <button type="reset">Reset</button>
+            </div>
+
+            <p id="message"></p>
+
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
